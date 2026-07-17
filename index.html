@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio // Aryan Faisal</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">&lt;RESHAD FAISAL ARYAN&gt;</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header class="hero-header">
+            <div class="profile-photo-wrap">
+                <img src="logopic.jpeg" alt="Aryan Faisal" class="profile-photo">
+            </div>
+            <h1 class="hero-title">[ Aryan's Portfolio  ]</h1>
+            <p class="hero-subtitle">Hello! I code sleek websites and model 3D interactive elements.</p>
+            
+            <button class="btn" onclick="toggleGlow()">Mezik</button>
+        </header>
+
+        <section id="about">
+            <h2>Hello There! Check Out My Journey</h2>
+            <p class="about-text">
+                I am a student currently studying computer science. I enjoy bridging the gap between logic (writing clean, functional code) and creativity (designing neat interfaces and rendering assets in Blender). 
+            </p>
+            
+            <h3 class="subsection-title">Side Quests (Hobbies)</h3>
+            <div class="hobbies-list">
+                <div class="hobby-item">
+                    <strong>3D Art and Game Development</strong>
+                    <p class="hobby-desc">Lighting & Modeling in Blender || Game Design in Unreal Engine 5.</p>
+                </div>
+                <div class="hobby-item">
+                    <strong>Gaming</strong>
+                    <p class="hobby-desc">Playing AAA games & indie titles.(Witcher 3 is GOAT)</p>
+                </div>
+                <div class="hobby-item">
+                    <strong>Fitness</strong>
+                    <p class="hobby-desc">Gym, Football(Siuu) and Basketball.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skill Tree</h2>
+            <div class="skills-tags-container">
+                <span class="project-tag skill-badge">HTML5 & CSS3</span>
+                <span class="project-tag skill-badge">JavaScript (ES6)</span>
+                <span class="project-tag skill-badge">Java OOP</span>
+                <span class="project-tag skill-badge">C Programming (the holy grail)</span>
+                <span class="project-tag skill-badge">Blender 3D Modeling</span>
+                <span class="project-tag skill-badge">Photoshop/ Illustrator</span>
+                <span class="project-tag skill-badge">Unreal Engine</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects (Quest Log)</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <iframe class="project-media"
+                        src="https://www.youtube.com/embed/FqtIHNQ_KXo"
+                        title="Blender Environment"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="project-info">
+                        <h3>Blender Environment</h3>
+                        <p class="project-desc">A donut built and animated  video rendering project built inside Tender.</p>
+                        <span class="project-tag">Blender 3D</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="frnd.jpeg" alt="Code Project 1" class="project-media">
+                    <div class="project-info">
+                        <h3>Web Project</h3>
+                        <p class="project-desc">A web page I made with a friend!.</p>
+                        <span class="project-tag">Web Development</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="gameimg.jpeg" alt="Code Project 2" class="project-media">
+                    <div class="project-info">
+                        <h3>Snake Game</h3>
+                        <p class="project-desc">A classic snake game I made my first semester.</p>
+                        <span class="project-tag">C</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="ard.jfif" alt="Code Project 3" class="project-media">
+                    <div class="project-info">
+                        <h3>Reaction Time Test</h3>
+                        <p class="project-desc">A simple reaction time test built using an Arduino.</p>
+                        <span class="project-tag">Arduino</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="sneaker.png" alt="3D Model" class="project-media project-media--zoomout">
+                    <div class="project-info">
+                        <h3>Low Poly Assets</h3>
+                        <p class="project-desc">A collection of stylized, game-ready environment assets.</p>
+                        <span class="project-tag">Blender Asset</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&auto=format&fit=crop" alt="Code Project 4" class="project-media">
+                    <div class="project-info">
+                        <h3>Matrix Calculation App</h3>
+                        <p class="project-desc">Mathematical matrix rendering utility resolving system arrays.</p>
+                        <span class="project-tag">MATLAB</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Drop a Message (Contact)</h2>
+            <form onsubmit="handleContact(event)">
+                <div class="form-group">
+                    <label>Alias / Name</label>
+                    <input type="text" class="form-control" placeholder="Player Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Communication Path (Email)</label>
+                    <input type="email" class="form-control" placeholder="yourname@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Message Content</label>
+                    <textarea class="form-control" rows="5" placeholder="Write your message details..." required></textarea>
+                </div>
+                <button type="submit" class="btn send-btn">TRANSMIT DATA</button>
+            </form>
+        </section>
+
+    </div> <footer>
+        <p>© Ary4nWayne 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
