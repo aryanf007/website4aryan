@@ -1,0 +1,286 @@
+/* ==========================================================================
+   1. COLOR THEME & FONTS
+   ========================================================================== */
+body {
+    background-color: #0f172a; /* Rich dark slate background */
+    color: #e2e8f0;            /* Bright light-gray text */
+    font-family: 'Courier New', Courier, monospace; 
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+    /* Smoothly transition any filters applied to the page */
+    transition: filter 0.5s ease; 
+}
+
+/* NOOB ANIMATION CLASS:
+   This shifts all neon teal colors (#06b6d4) to a neon purple/pink! */
+.glow-active {
+    filter: hue-rotate(120deg);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #1e293b; 
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    border-bottom: 2px solid #06b6d4; /* Teal accent line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #06b6d4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav .nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav .nav-links a:hover {
+    color: #06b6d4; 
+}
+
+/* Centered Layout Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px 60px 20px; 
+}
+
+/* Header styling */
+.hero-header {
+    text-align: center; 
+    padding: 40px 0; 
+    margin-bottom: 30px;
+}
+
+.profile-photo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #06b6d4;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+}
+
+.hero-title {
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    color: #94a3b8; 
+    font-size: 1.1rem; 
+    margin-bottom: 25px;
+}
+
+/* Section Cards */
+section {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #06b6d4;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.about-text {
+    line-height: 1.8;
+}
+
+.subsection-title {
+    color: #ffffff; 
+    margin-top: 25px;
+}
+
+/* Glow Buttons */
+.btn {
+    background-color: #06b6d4;
+    color: #0f172a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #22d3ee;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. PROJECTS & GRID LAYOUT
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #06b6d4;
+}
+
+.project-media {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #1e293b;
+}
+
+.project-media--zoomout {
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.project-desc {
+    font-size: 0.9rem; 
+    color: #94a3b8;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: #1e293b;
+    color: #06b6d4;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Skills list */
+.skills-tags-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.skill-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: #1e293b;
+    border-color: #06b6d4;
+}
+
+/* Hobbies list styling */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.hobby-item {
+    background-color: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #06b6d4;
+}
+
+.hobby-desc {
+    margin: 5px 0 0 0; 
+    font-size: 0.9rem; 
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   3. CONTACT FORM
+   ========================================================================== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    font-family: inherit;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #06b6d4;
+}
+
+.send-btn {
+    width: 100%;
+}
+
+/* Footer layout */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    background-color: #0f172a;
+    border-top: 1px solid #334155;
+}
